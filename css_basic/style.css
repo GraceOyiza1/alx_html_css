@@ -1,0 +1,30 @@
+/* Make body a flex container arranged in a column */
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    /* keeps everything filling the screen */
+    margin: 0;
+}
+
+/* Make main a flex container arranged in a row */
+main {
+    display: flex;
+    flex-direction: row;
+    flex: auto;
+    /* automatic size for layout flow */
+}
+
+/* Article takes 2/3 of width */
+article {
+    flex: 2;
+    overflow-y: auto;
+    /* allows scrolling */
+}
+
+/* Aside takes 1/3 of width */
+aside {
+    flex: 1;
+    overflow-y: auto;
+    /* allows scrolling */
+}
