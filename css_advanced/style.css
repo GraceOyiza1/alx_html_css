@@ -14,7 +14,7 @@ body {
 
 header {
     position: absolute;
-    padding: 20px 80px;
+    padding: 20px 50px;
     width: calc(100% - 160px);
 }
 
@@ -124,4 +124,36 @@ header nav ul li a {
 .main-part .bottom .pros img {
     border-radius: 50%;
     width: 120px;
+}
+
+
+.testimonials {
+    background-color: #C271FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 340px;
+    color: white;
+}
+
+.testimonials>div {
+    display: flex;
+    width: 943px;
+    gap: 40px;
+}
+
+.testimonials div blockquote {
+    width: 730px;
+    font-size: 22px;
+    font-weight: 300;
+    margin: 0;
+    padding: 10px;
+}
+
+.testimonials div img {
+    width: 160px;
+}
+
+.testimonials div p {
+    font-style: italic;
 }
