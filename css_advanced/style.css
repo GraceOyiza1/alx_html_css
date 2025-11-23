@@ -313,3 +313,40 @@ header nav ul li a {
     margin-top: 30px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
 }
+
+.faq {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 100px;
+}
+
+.faq h2 {
+    font-size: 60px;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.faq>div {
+    display: flex;
+    gap: 50px;
+    padding: 10px;
+}
+
+.faq>div div {
+    margin-bottom: 40px;
+    padding: 0 50px;
+}
+
+.faq>div div h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.faq>div div .ans {
+    font-size: 14px;
+    color: #071629;
+    opacity: 0.5;
+    line-height: 24px;
+}
