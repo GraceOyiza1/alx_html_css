@@ -350,3 +350,33 @@ header nav ul li a {
     opacity: 0.5;
     line-height: 24px;
 }
+
+footer {
+    background-color: #071629;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 249px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+footer section {
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+    width: 70%;
+    text-align: center;
+}
+
+footer section div {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+footer section .social {
+    display: flex;
+    gap: 20px;
+}
