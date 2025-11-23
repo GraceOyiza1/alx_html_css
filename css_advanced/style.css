@@ -157,3 +157,115 @@ header nav ul li a {
 .testimonials div p {
     font-style: italic;
 }
+
+.tutorials {
+    display: flex;
+    flex-direction: column;
+    padding: 80px 100px;
+    align-items: center;
+}
+
+.tutorials h2 {
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 60px;
+}
+
+.tutorials h2 span {
+    color: #C271FF;
+    font-weight: 800;
+}
+
+.tutorials>div {
+    display: flex;
+    gap: 40px;
+    max-width: 1228px;
+}
+
+.tutorials .item {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 290px;
+}
+
+.tutorials .item img.thumbnail {
+    width: 255px;
+    height: 154px;
+    object-fit: cover;
+}
+
+.tutorials .item .details {
+    padding: 10px 20px;
+}
+
+.tutorials .item h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.tutorials .item p.description {
+    font-size: 14px;
+    color: #071629;
+    opacity: 0.51;
+    line-height: 24px;
+}
+
+.tutorials .item .author {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.tutorials .item .author img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.tutorials .item .author h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+    color: #C271FF;
+}
+
+.tutorials .item .rating {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 10px;
+    color: #C271FF;
+    width: 107px;
+    float: left;
+}
+
+.tutorials .item .rating div:last-child {
+    color: #d8d8d8;
+}
+
+.tutorials .item .info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.tutorials .item .info p {
+    font-size: 14px;
+    color: #C271FF;
+    font-weight: 600;
+}
+
+.tutorials .item .play-button {
+    position: absolute;
+    top: 45px;
+    left: 96px;
+}
+
+.tutorials .item .play-button img {
+    width: 64px;
+    height: 64px;
+    opacity: 0.8;
+}
