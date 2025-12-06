@@ -1,3 +1,244 @@
+/* Responsive layout for main content and grids */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.1rem;
+    }
+
+    .hero-content p {
+        font-size: 0.95rem;
+    }
+
+    .hero-subtext {
+        font-size: 0.85rem;
+    }
+
+    .title-block h2 {
+        font-size: 1.7rem;
+    }
+
+    .title-block p {
+        font-size: 1rem;
+    }
+
+    .service-item h3 {
+        font-size: 1.1rem;
+    }
+
+    .service-item p {
+        font-size: 0.9rem;
+    }
+
+    .result-item p {
+        font-size: 0.85rem;
+    }
+
+    .button {
+        padding: 8px 24px;
+        font-size: 0.9rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px 16px;
+    }
+
+    .results-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 4vw;
+    }
+
+    .hero-content {
+        padding-top: 60px;
+        max-width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+
+    .hero-content p {
+        font-size: 0.85rem;
+        margin-bottom: 20px;
+    }
+
+    .hero-subtext {
+        font-size: 0.75rem;
+        max-width: 100%;
+    }
+
+    .title-block h2 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .title-block p {
+        font-size: 0.9rem;
+        margin-bottom: 40px;
+    }
+
+    .title-block {
+        margin-bottom: 40px;
+    }
+
+    .service-item h3 {
+        font-size: 1rem;
+    }
+
+    .service-item p {
+        font-size: 0.8rem;
+    }
+
+    .result-item p {
+        font-size: 0.8rem;
+    }
+
+    .button {
+        padding: 8px 20px;
+        font-size: 0.8rem;
+    }
+
+    .contact-form {
+        max-width: 100%;
+    }
+
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
+        font-size: 0.9rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .results-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .what-we-do-section,
+    .results-section,
+    .contact-section {
+        padding: 40px 0;
+    }
+
+    .service-icon {
+        font-size: 60px !important;
+    }
+
+    .result-icon {
+        font-size: 60px !important;
+        width: 60px !important;
+        height: 60px !important;
+    }
+
+    .result-number {
+        font-size: 1.1rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
+
+/* Hamburger menu responsive styles for <=480px */
+@media (max-width: 480px) {
+    .nav-bar {
+        position: relative;
+        min-height: 60px;
+        padding: 0 10px;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+    }
+
+    .menu-icon {
+        display: block !important;
+        position: absolute;
+        left: 20px;
+        top: 18px;
+        z-index: 300;
+        font-size: 2.2rem;
+        color: var(--color-white, #fff);
+        transition: color 0.3s;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .menu-icon span {
+        display: inline-block;
+        transition: transform 0.4s cubic-bezier(0.4, 2, 0.3, 1);
+    }
+
+    .menu-icon span.open {
+        transform: rotate(90deg) scale(1.2);
+        color: var(--color-primary-pink, #ff0080);
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100vw;
+        background: rgba(20, 30, 60, 0.98);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
+        border-radius: 0 0 12px 12px;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-20px) scaleY(0.98);
+        transition: opacity 0.3s, transform 0.4s cubic-bezier(0.4, 2, 0.3, 1);
+        z-index: 200;
+    }
+
+    .nav-links.open {
+        display: flex;
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0) scaleY(1);
+    }
+
+    .nav-links li {
+        padding: 18px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .nav-links li:last-child {
+        border-bottom: none;
+    }
+
+    .nav-links a {
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+        color: var(--color-white, #fff);
+        transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+        color: var(--color-primary-pink, #ff0080);
+    }
+
+    .menu-btn {
+        display: none;
+    }
+}
+
 /* -------------------------------
    1. Reset & Box Model
 --------------------------------- */
@@ -11,54 +252,129 @@
    2. Custom Font Setup
 --------------------------------- */
 @font-face {
-    font-family: 'HolbertonIcons';
-    src: url('fonts/holberton_school-icon.svg');
+    font-family: 'holberton_school-icon';
+    /* Note: I am updating the font file path structure slightly for robustness */
     src: url('fonts/holberton_school-icon.eot');
-    src: url('fonts/holberton_school-icon.ttf');
-    src: url('fonts/holberton_school-icon.woff') format('woff');
+    src: url('fonts/holberton_school-icon.eot?#iefix') format('embedded-opentype'),
+        url('fonts/holberton_school-icon.woff') format('woff'),
+        url('fonts/holberton_school-icon.ttf') format('truetype'),
+        url('fonts/holberton_school-icon.svg#HolbertonSchoolIcons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    /* Using swap for better loading experience */
 }
 
-/* Apply font to all <i> icons with class containing "holberton_school-icon" */
-i[class*="holberton_school-icon"] {
-    font-family: 'HolbertonIcons';
-    speak: never;
+/* Targets all icons using the custom font */
+[class^="holberton_school-icon-"],
+[class*=" holberton_school-icon-"] {
+    font-family: 'holberton_school-icon' !important;
+    speak: none;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
     text-transform: none;
     line-height: 1;
+
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* -------------------------------
-   3. Icon Mapping
---------------------------------- */
-.holberton_school-icon-ic_sound::before {
+/* Icon character mappings based on your provided list */
+.holberton_school-icon-arrow_1:before {
     content: "\e900";
 }
 
-.holberton_school-icon-ic_video::before {
+.holberton_school-icon-arrow_2:before {
     content: "\e901";
 }
 
-.holberton_school-icon-ic_music::before {
+.holberton_school-icon-arrow_3:before {
     content: "\e902";
 }
 
-.holberton_school-icon-ic_hearing::before {
+.holberton_school-icon-arrow_4:before {
     content: "\e903";
 }
 
-/* Base Body Styles */
+.holberton_school-icon-arrow_5:before {
+    content: "\e904";
+}
+
+.holberton_school-icon-check:before {
+    content: "\e905";
+}
+
+.holberton_school-icon-ic_bag:before {
+    content: "\e906";
+}
+
+.holberton_school-icon-ic_cart:before {
+    content: "\e907";
+}
+
+.holberton_school-icon-ic_facebook:before {
+    content: "\e908";
+}
+
+.holberton_school-icon-ic_hearing:before {
+    content: "\e909";
+}
+
+.holberton_school-icon-ic_instagram:before {
+    content: "\e90a";
+}
+
+.holberton_school-icon-ic_laptop:before {
+    content: "\e90b";
+}
+
+.holberton_school-icon-ic_money:before {
+    content: "\e90c";
+}
+
+.holberton_school-icon-ic_music:before {
+    content: "\e90d";
+}
+
+.holberton_school-icon-ic_sound:before {
+    content: "\e90e";
+}
+
+.holberton_school-icon-ic_twitter:before {
+    content: "\e90f";
+}
+
+.holberton_school-icon-ic_video:before {
+    content: "\e910";
+}
+
+.holberton_school-icon-menu:before {
+    content: "\e911";
+}
+
+.holberton_school-icon-search_1:before {
+    content: "\e912";
+}
+
+.holberton_school-icon-search_2:before {
+    content: "\e913";
+}
+
+.holberton_school-icon-star:before {
+    content: "\e914";
+}
+
+
+/* -------------------------------
+   3. Base Styles & Variables
+--------------------------------- */
 body {
-    /* CHANGE 1: Use a clean, professional sans-serif for the main body text */
-    font-family: 'HolbertonIcons', 'Verdana', 'Geneva', sans-serif;
+    font-family: 'Verdana', 'Geneva', sans-serif;
     line-height: 1.6;
     color: #333;
 }
 
-/* Defines colors that can be reused anywhere */
 :root {
     --color-primary-pink: #FF6565;
     --color-dark-blue: #071520;
@@ -68,15 +384,12 @@ body {
 
 /* --- C. Utility & Interaction Styles (Reusable) --- */
 
-/* Centers and controls the width of content across the whole page */
 .container {
     max-width: var(--max-content-width);
     margin: 0 auto;
-    /* This centers the block horizontally */
     padding: 0 20px;
 }
 
-/* Shared styling for section titles */
 .title-block {
     text-align: center;
     margin: 0 auto 80px;
@@ -84,11 +397,9 @@ body {
 }
 
 .title-block h2 {
-    /* CHANGE 2: Use a strong, serif font for the section headings to match the design */
     font-family: 'Georgia', serif;
     font-size: 2rem;
     font-weight: 700;
-    /* Ensure the font is bold */
     margin-bottom: 20px;
 }
 
@@ -96,7 +407,6 @@ body {
     font-size: 1.1rem;
 }
 
-/* Styles the Call To Action button */
 .button {
     background-color: var(--color-primary-pink);
     color: var(--color-white);
@@ -118,12 +428,22 @@ body {
 
 .hero-section {
     background-color: var(--color-dark-blue);
-    /* Assuming images/headphones_hero_1.jpg is the correct path */
     background-image: url('images/headphones_hero_1.jpg');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     color: var(--color-white);
+    /* Set a minimum height to contain the content and the image */
+    min-height: 600px;
+
+    /* Centering content inside hero */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     padding-bottom: 200px;
+    /* Provides space below the content */
 }
 
 .nav-bar {
@@ -131,6 +451,9 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
+    width: 100%;
+    /* Ensure nav spans the width */
+    max-width: var(--max-content-width);
 }
 
 .logo {
@@ -147,6 +470,7 @@ body {
     cursor: pointer;
     z-index: 200;
     font-size: 24px;
+    color: var(--color-white);
 }
 
 .nav-links {
@@ -185,10 +509,12 @@ body {
 .hero-content {
     padding-top: 100px;
     text-align: center;
+    max-width: 600px;
+    /* Centering is handled by parent flex container, but keep margin for safety */
+    margin: 0 auto;
 }
 
 .hero-content h1 {
-    /* CHANGE 3: Apply the strong serif font to the main hero title too */
     font-family: 'Georgia', serif;
     font-size: 3rem;
     font-weight: 700;
@@ -207,37 +533,44 @@ body {
     margin-right: auto;
 }
 
+/* Hamburger menu toggle logic */
+.menu-btn:checked~.nav-links {
+    display: flex;
+}
+
 /* --- E. What We Do Section Styling --- */
 .what-we-do-section {
     padding: 100px 0;
 }
 
-/* Services Grid (Mobile Default: 1 Column) */
 .services-grid {
-    /* Set up as a grid */
     display: grid;
-    /* Default: single column on small screens */
     grid-template-columns: 1fr;
     gap: 50px;
 }
 
 .service-item {
     text-align: center;
+    transition: transform 0.4s cubic-bezier(0.4, 2, 0.3, 1), box-shadow 0.3s, opacity 0.4s;
+    will-change: transform, opacity;
+    cursor: pointer;
 }
 
-/* Styling for the custom font icons */
+.service-item:hover {
+    transform: scale(1.08) rotate(-3deg);
+    opacity: 0.92;
+    box-shadow: 0 8px 32px 0 rgba(255, 0, 128, 0.15);
+    animation: bounce 0.6s;
+}
+
 .service-icon {
-    /* Use the primary pink color */
     color: var(--color-primary-pink);
-    /* Set a large font size for visibility and impact */
     font-size: 100px;
     display: block;
     margin: 0 auto 20px;
-    /* Center and add spacing below */
 }
 
 .service-item h3 {
-    /* CHANGE 4: Use the strong serif font for the sub-headings too */
     font-family: 'Georgia', serif;
     margin-bottom: 10px;
 }
@@ -245,13 +578,20 @@ body {
 /* --- F. Our Results Section Styling --- */
 .results-section {
     background-color: var(--color-dark-blue);
+    background-image: url('images/headphones_hero_2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: var(--color-white);
     padding: 100px 0;
+    text-align: center;
 }
 
 .results-section .title-block {
     color: var(--color-white);
+    margin-bottom: 50px;
 }
+
 
 .results-grid {
     display: grid;
@@ -277,7 +617,6 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: 'Georgia', serif;
-    /* Consistent heading style */
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--color-white);
@@ -286,8 +625,43 @@ body {
 .result-item p {
     font-size: 0.9rem;
     opacity: 0.7;
+    transition: transform 0.4s cubic-bezier(0.4, 2, 0.3, 1), box-shadow 0.3s, opacity 0.4s;
+    will-change: transform, opacity;
+    cursor: pointer;
+}
+
+.result-item:hover {
+    transform: scale(1.08) rotate(2deg);
+    opacity: 0.92;
+    box-shadow: 0 8px 32px 0 rgba(0, 255, 255, 0.15);
+    animation: bounce 0.6s;
     margin-top: 15px;
-    /* Spacing below the icon/number combo */
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1) translateY(0);
+    }
+
+    20% {
+        transform: scale(1.1, 0.9) translateY(-6px);
+    }
+
+    40% {
+        transform: scale(0.95, 1.05) translateY(-12px);
+    }
+
+    60% {
+        transform: scale(1.05, 0.97) translateY(-6px);
+    }
+
+    80% {
+        transform: scale(0.98, 1.02) translateY(-2px);
+    }
+
+    100% {
+        transform: scale(1) translateY(0);
+    }
 }
 
 /* --- G. Contact Us Section Styling --- */
@@ -314,7 +688,6 @@ body {
     padding: 10px 0;
     font-size: 1rem;
     font-family: 'Verdana', 'Geneva', sans-serif;
-    /* Use body font for inputs */
     outline: none;
     transition: border-bottom-color 0.3s;
 }
@@ -363,9 +736,6 @@ body {
     gap: 20px;
 }
 
-.footer-section .logo {
-    filter: invert(1);
-}
 
 .social-icons a {
     margin: 0 10px;
@@ -396,7 +766,6 @@ body {
     }
 
     .nav-bar {
-        /* Align items to the right on desktop */
         justify-content: flex-start;
         gap: 200px;
     }
@@ -412,7 +781,6 @@ body {
 
     /* What We Do Grid (2x2) */
     .services-grid {
-        /* Switch to two columns */
         grid-template-columns: 1fr 1fr;
         gap: 80px 40px;
     }

@@ -12,10 +12,11 @@
     <header class="hero-section">
         <div class="container">
             <nav class="nav-bar">
+                <!-- Hamburger Menu Input (Hidden) -->
                 <input type="checkbox" id="menu-btn" class="menu-btn">
                 <label for="menu-btn" class="menu-icon"><span>☰</span></label>
                 
-                <img src="images/logo_headphones.png" alt="">
+                <img src="images/logo_headphones.png" alt="Headphones Logo">
                 
                 <ul class="nav-links">
                     <li><a href="#what-we-do">what we do</a></li>
@@ -34,15 +35,9 @@
         </div> 
     </header>
     
-                </div>
-            </div>
-        </section>
-
-        </div> 
-    </header>
-    
     <main>
-        <!-- 2. WHAT WE DO SECTION -->
+        
+        <!-- 1. WHAT WE DO SECTION -->
         <section id="what-we-do" class="what-we-do-section">
             <div class="container">
                 <div class="title-block">
@@ -51,40 +46,78 @@
                 </div>
 
                 <div class="services-grid">
-                    <!-- Service 1: ic_sound icon - CORRECTED CLASS NAME -->
+                    <!-- Service 1: ic_sound icon -->
                     <div class="service-item">
-                        <!-- We need the icon class AND the styling class (service-icon) -->
                         <i class="holberton_school-icon-ic_sound service-icon"></i>
                         <h3>Lorem ipsum</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>
                     </div>
 
-                    <!-- Service 2: ic_video icon - CORRECTED CLASS NAME -->
+                    <!-- Service 2: ic_video icon -->
                     <div class="service-item">
                         <i class="holberton_school-icon-ic_video service-icon"></i>
                         <h3>Lorem ipsum</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>
                     </div>
 
-                    <!-- Service 3: ic_music icon - CORRECTED CLASS NAME -->
+                    <!-- Service 3: ic_music icon -->
                     <div class="service-item">
                         <i class="holberton_school-icon-ic_music service-icon"></i>
                         <h3>Lorem ipsum</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>
                     </div>
 
-                    <!-- Service 4: ic_hearing icon - CORRECTED CLASS NAME -->
+                    <!-- Service 4: ic_hearing icon -->
                     <div class="service-item">
                         <i class="holberton_school-icon-ic_hearing service-icon"></i>
                         <h3>Lorem ipsum</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>
                     </div>
                 </div> 
-
-            </div>
+            </div> 
         </section>
         
-        <!-- 4. CONTACT US SECTION (Placeholder) -->
+        <!-- 2. OUR RESULTS SECTION - CORRECTLY PLACED HERE -->
+        <section id="results" class="results-section">
+            <div class="container">
+                <div class="title-block">
+                    <h2>Our results speak for themselves</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, dicta.</p>
+                </div>
+
+                <div class="results-grid">
+                    <!-- Result 1 -->
+                    <div class="result-item">
+                        <img src="images/pentagone.png" alt="Pentagon Icon" class="result-icon">
+                        <span class="result-number">+2%</span>
+                        <p>Lorem ipsum dolor</p>
+                    </div>
+
+                    <!-- Result 2 -->
+                    <div class="result-item">
+                        <img src="images/pentagone.png" alt="Pentagon Icon" class="result-icon">
+                        <span class="result-number">+2%</span>
+                        <p>Lorem ipsum dolor</p>
+                    </div>
+
+                    <!-- Result 3 -->
+                    <div class="result-item">
+                        <img src="images/pentagone.png" alt="Pentagon Icon" class="result-icon">
+                        <span class="result-number">+2%</span>
+                        <p>Lorem ipsum dolor</p>
+                    </div>
+
+                    <!-- Result 4 -->
+                    <div class="result-item">
+                        <img src="images/pentagone.png" alt="Pentagon Icon" class="result-icon">
+                        <span class="result-number">+2%</span>
+                        <p>Lorem ipsum dolor</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. CONTACT US SECTION -->
         <section id="contact" class="contact-section">
             <div class="container">
                 <div class="title-block">
@@ -97,34 +130,39 @@
                         <label for="name" class="sr-only">Your Name</label>
                         <input type="text" id="name" placeholder="Name" required>
                     </div>
+                    
                     <div class="form-group">
                         <label for="email" class="sr-only">Your Email</label>
                         <input type="email" id="email" placeholder="Email" required>
                     </div>
+                    
                     <div class="form-group">
                         <label for="message" class="sr-only">Your Message</label>
                         <textarea id="message" placeholder="Your message" required></textarea>
                     </div>
+                    
                     <button type="submit" class="button">Call To Action</button>
                 </form>
             </div>
         </section>
-
+        
     </main>
     
-    <!-- 5. FOOTER (Placeholder) -->
+    <!-- 4. FOOTER -->
     <footer class="footer-section">
         <div class="container">
             <div class="footer-content">
                 <img src="images/logo_headphones.png" alt="Headphones Logo" class="logo">
                 <div class="social-icons">
-                    <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
-                    <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+                    <!-- Using Font Awesome classes if available, otherwise simplified as below -->
+                    <a href="#"><img src="images/facebook.png" alt="Twitter"></a>
+                    <a href="#"><img src="images/twitter.png" alt="Facebook"></a>
                     <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
                 </div>
             </div>
-            <p class="copyright">© Headphones 2025. All Rights Reserved.</p>
+            <p class="copyright">©️ Headphones 2025. All Rights Reserved.</p>
         </div>
+    </footer>
     
 </body>
 </html>
